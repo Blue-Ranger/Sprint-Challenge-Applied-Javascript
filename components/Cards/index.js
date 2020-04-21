@@ -22,20 +22,20 @@
 axios
   .get("https://lambda-times-backend.herokuapp.com/articles")
   .then((res) => {
-    const ArticleA = res.data.articles.javascript;
-    ArticleA.data = "javascript";
-    const ArticleB = res.data.articles.bootstrap;
-    ArticleB.data = "bootstrap";
-    const ArticleC = res.data.articles.technology;
-    ArticleC.data = "technology";
-    const ArticleD = res.data.articles.jquery;
-    ArticleD.data = "jquery";
+    const ArticlesA = res.data.articles.javascript;
+    ArticlesA.data = "javascript";
+    const ArticlesB = res.data.articles.bootstrap;
+    ArticlesB.data = "bootstrap";
+    const ArticlesC = res.data.articles.technology;
+    ArticlesC.data = "technology";
+    const ArticlesD = res.data.articles.jquery;
+    ArticlesD.data = "jquery";
     const ArticleE = res.data.articles.node;
-    ArticleE.data = "node.js";
+    ArticlesE.data = "node.js";
 
-    const articles = [ArticleA, ArticleB, ArticleC, ArticleD, ArticleE];
+    const articles = [ArticlesA, ArticlesB, ArticlesC, ArticlesD, ArticlesE];
 
-    article.forEach((article) => {
+    articles.forEach((article) => {
       article.forEach((art) => {
         const cards = document.querySelector(".cards-container");
         const card = Article(art);
@@ -59,7 +59,7 @@ function Article(obj) {
   const authorName = document.createElement("span");
 
   card.classList.add("card");
-  headerline.classList.add("headline");
+  headline.classList.add("headline");
   author.classList.add("author");
   imgContainer.classList.add("img-container");
 
