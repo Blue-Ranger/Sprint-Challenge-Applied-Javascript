@@ -1,0 +1,51 @@
+1. What is the DOM? 
+    A.
+        DOM is the way manipulated stuff is displayed in the browser using nodes. everything is an object.
+
+
+2. What is an event?
+    A.
+        The Event interface. An interface action like the mouseEvent: click, dblclick, mouseup, mousedown. Events the user can trigger: using the mouse wheel to scroll.
+
+
+3. What is an event listener?
+    A.
+        The EventListener interface allows ability to target elements for desired manipulation
+
+        buttonElement.addEventListener('click', function (event) {
+            alert('Element clicked through function!');
+        });
+
+        element.addEventListener(event, function, useCapture);
+
+
+4. Why would we convert a NodeList into an Array?
+    A.
+        Things like querySelectorAll() and getElementsByTagName() aren’t JavaScript methods, they’re browser APIs that let you access DOM elements. You can then manipulate them with JavaScript.
+
+        The Array.from() method creates a new array from an existing one, or from an array-like object (which is what a NodeList is).
+
+        So to be able to use an array method to cycle through data.
+
+        var btns = document.querySelectorAll('button');
+        var btnsArr = Array.from(btns);
+
+
+5. What is a component?
+    A.
+        Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and returns HTML via a render function.
+
+        Components come in two types, Class components and Function components.
+
+
+        class component
+            class Car extends React.Component {
+                render() {
+                    return <h2>Hi, I am a Car!</h2>;
+                }
+            }
+    ******************************************
+        function component
+            function Car() {
+                return <h2>Hi, I am also a Car!</h2>;
+            }
